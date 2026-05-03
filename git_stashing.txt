@@ -1,0 +1,146 @@
+What is Remote?
+Local repo → your laptop (E:\git and github)
+Remote repo → GitHub (cloud copy)
+Your Computer        GitHub
+(Local Repo)  ⇄  (Remote Repo)
+
+Git does NOT automatically sync
+You must explicitly push & pull
+
+Check Existing Remotes
+git remote
+
+git remote -v
+
+Output:
+
+origin  https://github.com/Ragini-Roy7/git-and-github.git (fetch)
+
+origin  https://github.com/Ragini-Roy7/git-and-github.git (push)
+
+
+➕ Add a Remote
+git remote add origin https://github.com/username/repo.git
+
+Used when:
+
+You ran git init
+Repo was not connected to GitHub yet
+
+
+🔄 How Remote is Used (Daily Workflow)
+1️⃣ Download changes from remote
+git fetch origin
+
+(only downloads, does NOT merge)
+
+2️⃣ Download + merge changes
+git pull origin main
+
+Equivalent to:
+
+git fetch
+git merge
+
+
+3️⃣ Upload your commits
+git push origin main
+
+
+🧪 What Happens During GSSoC (Real Scenario)
+
+1️⃣ You fork a project
+2️⃣ Your fork = origin
+3️⃣ Original project = upstream
+
+git remote add upstream https://github.com/original/project.git
+
+Then:
+
+git fetch upstream
+git merge upstream/main
+This keeps your fork updated ✔
+
+✔ fetch = download changes
+✔ push = upload changes
+
+
+
+Git does NOT talk to GitHub unless you tell it to
+
+No automatic syncing
+No background push
+Everything is explicit
+
+🧪 Check Remote Branches
+git branch -r
+
+Output:
+
+origin/main
+origin/dev
+
+Stashing?
+Stashing means:
+
+“Save my unfinished work temporarily and clean my working directory.”
+
+📌 Your code is not committed
+📌 Your changes are not lost
+📌 Git hides them safely
+
+🧪 Real Scenario (GSSoC-style)
+
+You are working on:
+
+feature/readme-update
+
+Mentor says:
+
+“Please update your branch with latest upstream main”
+
+But you have uncommitted changes 😨
+
+👉 Solution: stash
+
+🔹 Basic Stash Commands
+1️⃣ Save changes (stash)
+git stash
+OR (recommended – with message):
+
+git stash push -m "WIP: improving README formatting"
+
+✔ Working directory becomes clean
+✔ Changes safely stored
+
+2️⃣ See stashed changes
+git stash list
+Output:
+
+stash@{0}: WIP: improving README formatting
+stash@{1}: WIP: navbar css fix
+
+3️⃣ Apply stash (keep stash)
+git stash apply
+
+✔ Restores changes
+✔ Keeps stash in list
+
+4️⃣ Apply and remove stash (most common)
+git stash pop
+
+✔ Restores changes
+✔ Removes from stash list
+
+
+🧪 Stashing with Untracked Files
+
+By default, untracked files are NOT stashed
+
+To include them:
+
+git stash -u
+
+Include ignored files too:
+
+git stash -a

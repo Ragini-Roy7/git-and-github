@@ -40,3 +40,10 @@ Imagine you’re fixing a login bug:
 3. You push the commit → GitHub shows “Ragini fixed login bug” with your profile attached.
 
 #This setup is like introducing yourself to Git and making sure it knows how to interact with you smoothly.
+
+git log --oneline 
+Meaning:
+git log → shows the history of commits
+--oneline → shows each commit in one short line (compact view)
+
+👉 This is the most commonly used command to quickly see what has happened in a repository.

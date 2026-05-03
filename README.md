@@ -127,6 +127,4 @@ Open a Pull Request and explain **what you changed and why**.
 
 Happy learning & contributing! 🌱✨
 
----
 
-> 💬 If you are a beginner and feeling scared — you are exactly where you need to be.

@@ -1,1 +1,97 @@
 #practicing stash commands
+To understand stashing, follow these steps:
+✏️ Step 1: Make some changes (intentionally)
+Option A (recommended): Edit an existing file
+
+Open any file (example: README.md) in VS Code.
+
+Add something simple at the bottom:
+
+## Stash Practice
+
+This line is added only to practice git stash.
+
+Save the file.
+
+Option B: Create a new file (extra learning)
+
+Create a new file:
+
+stash-test.txt
+
+Write:
+
+This file is for practicing git stash commands.
+
+Save it.
+
+🔍 Step 2: Check status (IMPORTANT)
+git status
+
+You should see something like:
+
+Changes not staged for commit:
+  modified: README.md
+
+Untracked files:
+  stash-test.txt
+
+✔ now you have both tracked + untracked changes
+
+🧳 Step 3: Create a stash
+Basic stash (tracked files only)
+git stash
+
+OR (best practice):
+
+git stash push -m "practice: stash experiment"
+
+Now run:
+
+git status
+You should see:
+
+nothing to commit, working tree clean
+
+🔎 Step 4: View your stash
+git stash list
+
+Example output:
+
+stash@{0}: On main: practice: stash experiment
+
+🔄 Step 5: Apply stash (without deleting)
+git stash apply
+
+Check:
+
+git status
+
+✔ Your changes are back
+✔ Stash still exists
+
+🔄 Step 6: Pop stash (apply + delete)
+git stash pop
+
+Now:
+
+git stash list
+
+✔ Stash is gone
+✔ Changes restored
+
+🧪 Step 7 (Important): Stash untracked files
+
+Remember stash-test.txt?
+
+git stash -u
+
+Now:
+
+git status
+
+✔ Everything clean
+
+Bring it back:
+
+git stash pop

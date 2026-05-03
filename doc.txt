@@ -1,0 +1,42 @@
+# Learning doc for git and github
+
+## 1. `git config --global user.name "Your Name"`
+- **Purpose**: Sets your name globally so Git can tag every commit with it.
+- **Real Example**:  
+  You’re working at your startup, and you commit a bug fix. Git records:
+  ```
+  Author: Dilip <dilip@example.com>
+  ```
+  This way, when teammates run `git log`, they know *you* wrote that change. Without this, commits might show up as “unknown” or mismatched.
+
+---
+
+## 2. `git config --global user.email "your@email.com"`
+- **Purpose**: Associates your commits with your email address.
+- **Real Example**:  
+  On GitHub, commits are linked to your account via email. If you set:
+  ```bash
+  git config --global user.email "dilip@startup.com"
+  ```
+  then GitHub shows your avatar and profile next to commits. If you forget this, commits may not link to your account, which can confuse collaborators.
+
+---
+
+## 3. `git config --global core.editor "code --wait"`
+- **Purpose**: Tells Git which editor to open when it needs you to write a commit message or resolve a merge conflict.
+- **Real Example**:  
+  Suppose you run `git commit` without `-m`. Git opens your editor so you can type a detailed message.  
+  By setting:
+  ```bash
+  git config --global core.editor "code --wait"
+  ```
+  Git will open **VS Code** instead of defaulting to Vim or Nano. The `--wait` flag ensures Git pauses until you close VS Code, so it knows you’re done editing.
+
+
+## 🔗 How They Work Together
+Imagine you’re fixing a login bug:
+1. You  set your **name** and **email** → commits are properly attributed to you.
+2. You set VS Code  or any IDE as your **editor** → when you commit, Git opens VS Code /any IDE for a detailed message.
+3. You push the commit → GitHub shows “Ragini fixed login bug” with your profile attached.
+
+#This setup is like introducing yourself to Git and making sure it knows how to interact with you smoothly.

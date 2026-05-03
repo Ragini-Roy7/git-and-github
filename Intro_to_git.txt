@@ -58,7 +58,7 @@ Your working directory matches that old commit
 But newer commits are NOT deleted — they’re just not visible yet
 Git keeps private history of every place HEAD has ever been
 
-git reflog
+#git reflog
 recovers every tool
 
 After resetting,how to check previous commit history?

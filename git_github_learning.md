@@ -17,3 +17,16 @@ iii.commiting them
 Going back to some previous saved point
 logging everything
 reverting back to previous saved point
+
+
+#How to check Status and Logs -making possibilities -Branching
+#check status
+#checks log with graph option
+#Understanding branch
+#Merge branches
+
+#What are merging techniques - ff merge, three way merge, squash merging, recursive strategy merge, rebase and merge?
+
+#How to handle conflicts?
+#How to delete branches?
+#Understand Stashing

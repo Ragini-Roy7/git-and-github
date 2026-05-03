@@ -66,3 +66,26 @@ Use git log --oneline --graph
 #successfully back to newer commits
 
 
+#Intializing folder/project to git
+git init
+
+#Check status of project
+git status -s -> (-s = short)
+ 👉tells which branch you are on 
+👉which files are :
+🔹modified
+🔹staged untracked
+🔹whether your branch is in sync with Github 
+Example output:
+ M README.md
+?? notes.txt
+A  src/app.js
+Changes are not staged 
+👉 You edited the file but Git won’t commit it yet.
+
+🔹 A src/app.js
+File is staged
+Ready to be committed
+
+👉 It will be included in the next commit.
+

@@ -30,3 +30,5 @@ reverting back to previous saved point
 #How to handle conflicts?
 #How to delete branches?
 #Understand Stashing
+
+![Screenshot](Screenshot%202026-05-03%20214101.png)

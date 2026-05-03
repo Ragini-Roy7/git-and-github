@@ -31,4 +31,5 @@ reverting back to previous saved point
 #How to delete branches?
 #Understand Stashing
 
+Status symbols meaning
 ![Screenshot](Screenshot%202026-05-03%20214101.png)

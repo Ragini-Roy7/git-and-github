@@ -47,3 +47,22 @@ git log → shows the history of commits
 --oneline → shows each commit in one short line (compact view)
 
 👉 This is the most commonly used command to quickly see what has happened in a repository.
+
+#3 commands of git reset --hard <hash> -> controlled time travel
+#git reset --soft
+#git reset --mixed
+git reset --hard HEAD~1
+Each time, Git moved one commit backward.
+HEAD is at d0f67ed (assumed any commit hash)
+Your working directory matches that old commit
+But newer commits are NOT deleted — they’re just not visible yet
+Git keeps private history of every place HEAD has ever been
+
+git reflog
+recovers every tool
+
+After resetting,how to check previous commit history?
+Use git log --oneline --graph
+#successfully back to newer commits
+
+
